@@ -1,0 +1,5 @@
+{
+    "require": {
+        "graviton/rql-parser": "^3.0"
+    }
+}

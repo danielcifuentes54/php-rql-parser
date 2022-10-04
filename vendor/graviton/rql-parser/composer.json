@@ -1,0 +1,25 @@
+{
+  "name": "graviton/rql-parser",
+  "keywords": ["rest", "rql", "resource", "query", "language", "parser"],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": { "Graviton\\RqlParser\\": "src/"}
+  },
+  "autoload-dev": {
+    "psr-4": { "Graviton\\RqlParserTests\\": "test/"}
+  },
+  "require": {
+    "php": ">=7.2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~8",
+    "squizlabs/php_codesniffer": "~2.0"
+  },
+  "scripts": {
+    "cs": [
+      "vendor/bin/phpcs --standard=PSR1 src/ tests/",
+      "vendor/bin/phpcs --standard=PSR2 src/ tests/"
+    ]
+  },
+  "minimum-stability": "stable"
+}
