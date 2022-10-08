@@ -13,12 +13,14 @@ class API {
     $tokens = $lexer->tokenize($rql);
     // parsing
     $parsing = $parser->parse($tokens);
+    //var_dump($parsing);
     $array = array(
       "offset" => $parsing->getLimit()->getOffset(),
       "limit" => $parsing->getLimit()->getLimit(),
       "field" => $parsing->getQuery()->getField(),
       "value" => $parsing->getQuery()->getValue(),
-      "sort" => $parsing->getSort()->getFields()
+      "sort" => $parsing->getSort()->getFields(),
+      "operator" => $parsing->getQuery()->getNodeName()
     );
     return json_encode($array);
   }
